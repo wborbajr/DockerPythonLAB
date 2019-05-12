@@ -6,7 +6,7 @@ services:
     build: ./flask
     container_name: flask
     image: bplus_flask
-    #restart: always
+    restart: always
     environment:
       - APP_NAME=BFlaskAPP
     expose:
@@ -24,3 +24,4 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
       - flask
+    tty: true
